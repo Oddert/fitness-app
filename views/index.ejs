@@ -1,0 +1,53 @@
+<% include ./partials/header %>
+  <div class="odd-container">
+    <h1>Fitness Tracker API</h1>
+
+    <div class="new_user">
+      <label for='new-user-form'>Add a user: </label>
+      <form action='/adduser' method='POST' id='new-user-form'>
+        <input type='text' name='username' placeholder='Username' />
+        <br />
+        <button>Add User!</button>
+      </form>
+    </div>
+
+    <div class="new_activity">
+      <label for='new-activity-form'>Add an Activity: </label>
+      <form action='/addactivity' method='POST' id='new-activity-form'>
+        <input type='text' name='username' placeholder='Username' required />
+        <input type='text' name='newactivity[description]' placeholder='Description' required />
+        <input type='number' name='newactivity[duration]' placeholder='Duration (min)' required />
+        <input type='date' name='newactivity[date]' placeholder='Date' required />
+        <br />
+        <button>Add Activity!</button>
+      </form>
+    </div>
+
+    <div class="instructions">
+      <h3>Ussage: </h3>
+      <h5>Note that 'from', 'to', and 'limit' are optional.</h5>
+      <a href='/api/log?username=oddert&from=02/03/2014&to=24/06/2019&limit=5'>
+        <code>/api/log?username={username}&from={02/03/2014}&to={24/06/2018}&limit={5}</code>
+      </a>
+      <h3 class="exemplar-label">Responce format: </h3>
+      <div class="exemplar-responce">
+  <code>[
+  {
+    "user": {
+        "username": "oddert",
+        "id": "5b2fd674c9055623c4e0148c"
+      },
+    "_id": "5b2fdbd06597fb3dd49d96c9",
+    "name": "Activity",
+    "description": "Ran around Victoria park and speed-petted some squirls.",
+    "duration": 12,
+    "date": "2017-07-23T00:00:00.000Z",
+    "__v": 0
+  }
+]</code>
+
+      </div>
+    </div>
+
+  </div>
+<% include ./partials/footer %>

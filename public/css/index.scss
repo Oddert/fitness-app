@@ -1,0 +1,67 @@
+.odd-container {
+  border: 1px solid rgba(200,200,200,0.1);
+  width: 70vw;
+  margin-left: 50vw;
+  transform: translate(-50%, 0);
+  text-align: center;
+  & h1 {
+    text-align: center;
+    font-family: 'Nothing You Could Do', Arial
+  }
+  input {
+    width: 60%;
+    font-size: 1.3em;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #27ae61;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+    &:focus {
+      border: 2px solid #2dcc70;
+      margin: 0;
+      box-shadow: 0px 0px 30px rgba(45,204,112, 0.2);
+    }
+  }
+  button {
+    margin-top: 10px;
+    margin-bottom: 1px;
+    width: 60%;
+    font-size: 1.1em;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #27ae61;
+    background-color: #27ae61;
+    color: white;
+    &:hover {
+      border: 2px solid #2dcc70;
+      margin-top: 9px;
+      margin-bottom: 0;
+      box-shadow: 0px 0px 30px rgba(45,204,112, 0.2);
+    }
+    &:active {
+      background-color: #97e7ba;
+    }
+  }
+  & .exemplar-label {
+    margin-top: 30px;
+  }
+  & .exemplar-responce {
+    text-align: left;
+    white-space: pre;
+    // text-decoration: underline;
+  }
+  & .new_user {
+    margin-top: 50px;
+  }
+  & .new_activity {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .odd-container {
+    margin-left: 0;
+    transform: none;
+    width: 100vw;
+  }
+}
