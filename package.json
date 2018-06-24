@@ -1,0 +1,19 @@
+{
+  "name": "fitness-app",
+  "version": "1.0.0",
+  "description": "A microservice API for the Free Code Camp challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oddert/fitness-app.git"
+  },
+  "author": "Robyn Veitch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oddert/fitness-app/issues"
+  },
+  "homepage": "https://github.com/Oddert/fitness-app#readme"
+}
