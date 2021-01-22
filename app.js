@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express         = require('express'),
       app             = express(),
       bodyParser      = require('body-parser'),
@@ -11,7 +12,7 @@ const User        = require('./models/User'),
 
 const PORT        = process.env.PORT || 3000;
 
-mongoose.connect("mongodb://" + MADE_WITH + ":" + SECRET + "@ds259499.mlab.com:59499/freecodecamp-playground");
+mongoose.connect(process.env.DATABASE);
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
